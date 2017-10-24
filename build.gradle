@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'is.ru.ticTacToe.TicTacToe'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'joda-time:joda-time:2.9.9'
+	testImplementation 'junit:junit:4.12'
+}
+

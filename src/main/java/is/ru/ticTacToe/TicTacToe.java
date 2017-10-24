@@ -1,4 +1,4 @@
-//package ticTacToe.TicTacToe.src.main.java.is.ru.ticTacToe;
+package is.ru.ticTacToe;
 
 public class TicTacToe {
 
