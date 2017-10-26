@@ -1,0 +1,77 @@
+.
+└── TicTacToe
+    ├── build
+    │   ├── classes
+    │   │   └── java
+    │   │       ├── main
+    │   │       │   └── is
+    │   │       │       └── ru
+    │   │       │           └── ticTacToe
+    │   │       │               └── TicTacToe.class
+    │   │       └── test
+    │   │           └── is
+    │   │               └── ru
+    │   │                   └── ticTacToe
+    │   │                       └── TicTacToeTest.class
+    │   ├── distributions
+    │   │   ├── TicTacToe.tar
+    │   │   └── TicTacToe.zip
+    │   ├── libs
+    │   │   └── TicTacToe.jar
+    │   ├── reports
+    │   │   └── tests
+    │   │       └── test
+    │   │           ├── classes
+    │   │           │   └── is.ru.ticTacToe.TicTacToeTest.html
+    │   │           ├── css
+    │   │           │   ├── base-style.css
+    │   │           │   └── style.css
+    │   │           ├── index.html
+    │   │           ├── js
+    │   │           │   └── report.js
+    │   │           └── packages
+    │   │               └── is.ru.ticTacToe.html
+    │   ├── resources
+    │   │   └── test
+    │   │       ├── hamcrest-core-1.3.jar
+    │   │       └── junit-4.12.jar
+    │   ├── scripts
+    │   │   ├── TicTacToe
+    │   │   └── TicTacToe.bat
+    │   ├── test-results
+    │   │   └── test
+    │   │       ├── binary
+    │   │       │   ├── output.bin
+    │   │       │   ├── output.bin.idx
+    │   │       │   └── results.bin
+    │   │       └── TEST-is.ru.ticTacToe.TicTacToeTest.xml
+    │   └── tmp
+    │       ├── compileJava
+    │       ├── compileTestJava
+    │       └── jar
+    │           └── MANIFEST.MF
+    ├── build.gradle
+    ├── classes
+    ├── docs
+    │   ├── AdminManual.txt
+    │   └── DevManual.txt
+    ├── ProjectTree.txt
+    ├── README.md
+    └── src
+        ├── main
+        │   └── java
+        │       └── is
+        │           └── ru
+        │               └── ticTacToe
+        │                   └── TicTacToe.java
+        └── test
+            ├── java
+            │   └── is
+            │       └── ru
+            │           └── ticTacToe
+            │               └── TicTacToeTest.java
+            └── resources
+                ├── hamcrest-core-1.3.jar
+                └── junit-4.12.jar
+
+45 directories, 29 files
