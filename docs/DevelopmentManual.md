@@ -6,7 +6,7 @@ To gain access to the source code send a request to [ASS].
 
 ## You need git and a github account
 
-- Create an account on [github].
+- ###### Create an account on [github].
 
 To be able to get the source code you need to have git installed on your computer.
 - ###### Install on [Windows]
