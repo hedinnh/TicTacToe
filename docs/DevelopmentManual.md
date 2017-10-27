@@ -33,7 +33,7 @@ yaourt jdk
 ```
 - Also available as jdk in AUR.
 
-#### Install FreeBSD and BSD systems:
+### Install on FreeBSD and BSD systems:
 ```sh
 pkg install openjdk8
 ```
