@@ -12,14 +12,13 @@ To be able to get the source code you need to have git installed on your compute
 - ###### Install on [MacOS]
 - ###### Install on [GNU/Linux and UNIX]
 
-
 ## You need java
 
-##### Install on MacOS or Windows
+### Install on MacOS or Windows
 - Download the jdk installer from [Oracle] Java and run it.
 - Add Java to the [Path].
 
-#### Install on GNU/Linux
+### Install on GNU/Linux
 Install `openjdk-8-jdk`
 #### Ubuntu and Ubuntu-based systems:
 ```sh
@@ -33,22 +32,17 @@ yaourt jdk
 ```
 - Also available as jdk in AUR.
 
-#### FreeBSD and BSD systems:
+#### Install FreeBSD and BSD systems:
 ```sh
 pkg install openjdk8
 ```
-Hvað er gradle
+## You need Gradle
+Gradle is used for build automation.
+- ###### install [Gradle]
 
-Hafa git og eiga github aðgang - setja link
-https://github.com/
-
-Hafa java
-	Leiðbeiningar um java
-
-Hafa gradle
-	Setja leiðbeiningar um hvernig á að setja það upp á Windows, Linux, Mac
-
-Gradle sækir junit
+License
+----
+GPL
 
 [ASS]: <ass_ttt@programmer.net>
 [Windows]: <https://git-scm.com/download/win>
@@ -57,3 +51,4 @@ Gradle sækir junit
 [GNU/Linux and UNIX]: <https://git-scm.com/download/linux>
 [Oracle]: <http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
 [Path]: <https://www.java.com/en/download/help/path.xml>
+[Gradle]: <https://gradle.org/install/>
