@@ -16,8 +16,8 @@ To be able to get the source code you need to have git installed on your compute
 ## You need java
 
 ### Install on MacOS or Windows
-- Download the jdk installer from [Oracle] Java and run it.
-- Add Java to the [Path].
+- ###### Download the jdk installer from [Oracle] Java and run it.
+- ###### Add Java to the [Path].
 
 ### Install on GNU/Linux
 Install `openjdk-8-jdk`
