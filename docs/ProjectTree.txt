@@ -53,9 +53,9 @@
     ├── build.gradle
     ├── classes
     ├── docs
-    │   ├── AdminManual.txt
-    │   └── DevManual.txt
-    ├── ProjectTree.txt
+    │   ├── AdmininistrationManual.md
+    │   ├── DevelopmentManual.md
+    │   └── ProjectTree.txt
     ├── README.md
     └── src
         ├── main
