@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/hedinnh/TicTacToe.svg?token=9PxtkaBdY52VSqkX1iMg&branch=master)](https://travis-ci.com/hedinnh/TicTacToe/)
 # TicTacToe
 
 TicTacToe is a two player strategy game. <br />
