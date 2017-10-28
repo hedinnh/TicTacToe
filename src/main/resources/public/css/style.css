@@ -29,3 +29,20 @@ html, body {
 .cell:hover {
     background-color:  #e4e7e4;
 }
+
+.header {
+    background-color: black;
+    display: block;
+    height: 220px;
+   
+}
+
+.head1 {
+    display: grid;
+    color: white;
+}
+
+.head2 {
+    display: grid;
+    color: white;
+}
