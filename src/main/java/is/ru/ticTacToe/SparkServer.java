@@ -24,15 +24,17 @@ public class SparkServer {
 		});
 		
 	}
-	
+
 	
 	
 	public static String test() {
 		return "a";
 	}
 	public static void main(String[] args) {
-	//get("/", (req, res) -> test());	
-		//Spark
+	String port = System.getenv("PORT");
+        if (port != null) {
+        port(Integer.valueOf(port));
+    }
 	new SparkServer();
 	}
 
