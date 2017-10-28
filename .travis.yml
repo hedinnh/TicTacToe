@@ -1,4 +1,8 @@
 language: java
+before_install:
+ - chmod +x gradlew
+script:
+  - ./gradlew check
 deploy:
   provider: heroku
   api_key:
