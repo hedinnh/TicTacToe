@@ -61,7 +61,60 @@ public class TicTacToe {
 			done = true;
 	}
 
+		/** Check if there is a winner
+	 * @return E if even
+	 */
+	public char checkWin()
+	{
+		for(int i = 0; i < 3; i++)
+		{
+			if(board[i][0] == board[i][1] && board[i][1] == board[i][2])
+			{
+				return board[i][0];
+			}
+			if(board[0][i] == board[1][i] && board[1][i] == board[2][i])
+			{
+				return board[0][i];
+			}
+		}
+		if(board[0][0] == board[1][1] && board[1][1] == board[2][2] || board[0][2] == board[1][1] && board[1][1] == board[2][0])
+			return board[1][1];
+		if(done)
+			return 'E';
+		return '-';
 
+	}
+	
+	public void makeMove(int i)
+	{
+		int y = 0;
+		if(i > 3)
+		{
+			if(i > 6)
+			{
+				i = i - 6;
+				y = 2;
+			}
+			else{
+				i = i - 3;
+				y = 1;
+			}
+		}
+		i = i - 1;
+		if(board[y][i] == '-')
+		{
+			if(!playerTurn)
+			{
+				board[y][i] = 'O';
+				playerTurn = !playerTurn;
+			}
+			else
+			{
+				board[y][i] = 'X';
+				playerTurn = !playerTurn;
+			}
+		}
+	}
 
 	public static void main(String[] args) {
 		
