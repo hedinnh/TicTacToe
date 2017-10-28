@@ -59,3 +59,8 @@ html, body {
     display: grid;
     color: white;
 }
+
+.footer {
+    background-color: black;
+    color: white;
+}
