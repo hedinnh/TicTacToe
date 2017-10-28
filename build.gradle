@@ -4,10 +4,11 @@ mainClassName = 'is.ru.ticTacToe.SparkServer'
 
 repositories {
     mavenCentral()
+	jcenter()
 }
 
 dependencies {
-   // testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 	compile fileTree(dir: 'libs', include: '*.jar')
 	compile files('/libs/json-simple-1.1.1.jar')
 	compile 'com.sparkjava:spark-core:2.6.0'
