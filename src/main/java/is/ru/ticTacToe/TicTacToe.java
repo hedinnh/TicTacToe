@@ -7,12 +7,13 @@ import edu.princeton.cs.algs4.*;
 public class TicTacToe {
 	private static char[][] board;
 	private static boolean done;
-	private static boolean playerTurn = false;
+	private static boolean playerTurn = true;
 	/**
 	 * Constructor, set variables and call createboard
 	 */
 	public TicTacToe() {
 		done = false;
+		playerTurn = true;
 		createBoard();
 	}
 	/** Create a 3x3[][] board for TicTacToe game
@@ -21,25 +22,19 @@ public class TicTacToe {
 	public static char[][] createBoard()
 	{
 		board = new char[3][3];
-		for(int i = 0; i < 3; i++)
-		{
-			for(int j = 0; j < 3; j++)
-			{
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
 				board[i][j] = '-';
 			}
 		}
-		
 		return board;
 	}
 	/** 
 	 * Print the multidimensional array to console
 	 */
-	public void printBoard()
-	{
-		for(int i = 0; i < 3; i++)
-		{
-			for(int j = 0; j < 3; j++)
-			{
+	public void printBoard() {
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
 				System.out.print(board[i][j]);
 			}
 			System.out.println();
@@ -48,96 +43,89 @@ public class TicTacToe {
 		System.out.println();
 
 	}
-	public void boardFull()
-	{
+	public void boardFull() {
 		int count = 0;
 		for (int i = 0; i < 3; i++) {
-			for(int j = 0; j < 3; j++)
-			{
+			for(int j = 0; j < 3; j++) {
 				if(board[i][j] != '-')
 					count++;
 			}
 		}
-		if(count == 9)
+		if(count == 9) {
 			done = true;
+		}
 	}
 
 		/** Check if there is a winner
 	 * @return E if even
 	 */
-	public char checkWin()
-	{
-		for(int i = 0; i < 3; i++)
-		{
-			if(board[i][0] == board[i][1] && board[i][1] == board[i][2])
-			{
+	public char checkWin() {
+		for(int i = 0; i < 3; i++) {
+			if(board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != '-') {
+				done = true;
 				return board[i][0];
 			}
-			if(board[0][i] == board[1][i] && board[1][i] == board[2][i])
-			{
+			if(board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != '-') {
+				done = true;
 				return board[0][i];
 			}
 		}
-		if(board[0][0] == board[1][1] && board[1][1] == board[2][2] || board[0][2] == board[1][1] && board[1][1] == board[2][0])
+		if((board[0][0] == board[1][1] && board[1][1] == board[2][2] || board[0][2] == board[1][1] && board[1][1] == board[2][0]) && board[1][1] != '-') {
+			done = true;
 			return board[1][1];
-		if(done)
+		}
+		if(done) {
 			return 'E';
+		}
 		return '-';
-
 	}
 	
 	public void makeMove(int i)
 	{
 		int y = 0;
-		if(i > 3)
-		{
-			if(i > 6)
-			{
+		if(i > 3) {
+			if(i > 6) {
 				i = i - 6;
 				y = 2;
-			}
-			else{
+			} else {
 				i = i - 3;
 				y = 1;
 			}
 		}
 		i = i - 1;
-		if(board[y][i] == '-')
-		{
-			if(!playerTurn)
-			{
+		if(board[y][i] == '-') {
+			if(!playerTurn) {
 				board[y][i] = 'O';
 				playerTurn = !playerTurn;
-			}
-			else
-			{
+			} else {
 				board[y][i] = 'X';
 				playerTurn = !playerTurn;
 			}
 		}
+		checkWin();
 	}
 	
-	public boolean validateMove(int i, char[][] b)
-	{
+	public boolean validateMove(int i, char[][] b) {
 		int y = 0;
-		if(i > 3)
-		{
+		if(i > 3) {
 			i = i - 3;
 			y = y++;
-			if(i > 3)
-			{
+			if(i > 3) {
 				i = i - 3;
 				y = y + 3;
 			}
 		}
 		i -= 1;
-		if(b[y][i] == '-')
+		if(b[y][i] == '-') {
 			return true;
-
+		}
 		return false;
 	}
 
-	public JSONObject updateCell() {
+	public JSONObject reset() {
+		done = false;
+		playerTurn = true;
+		createBoard();
 		JSONArray arr = new JSONArray();
 		JSONObject obj = new JSONObject();
 		
@@ -150,6 +138,8 @@ public class TicTacToe {
 			arr.add(cells);
 		}
 		obj.put("cells", arr);
+		obj.put("gameOver" , done);
+		obj.put("winner", String.valueOf(checkWin()));
 		return obj;
 	}
 	public JSONObject updateCell(int cell) {
@@ -165,6 +155,8 @@ public class TicTacToe {
 			arr.add(cells);
 		}
 		obj.put("cells", arr);
+		obj.put("gameOver" , done);
+		obj.put("winner", String.valueOf(checkWin()));
 		return obj;
 	}
 	public static void main(String[] args) {

@@ -13,12 +13,14 @@ public class SparkServer {
 		ttt = new TicTacToe();
 		staticFileLocation("/public");
 		
-		get("/reset", (req, res) -> {
-			ttt = new TicTacToe();
-			return ttt.updateCell();
+		post("/reset", (req, res) -> {
+
+			res.type("application/json");
+			return ttt.reset();
 		});
-		get("/updateCell/:cell", (req, res) -> {
-			return ttt.updateCell(Integer.parseInt(req.params(":cell")));
+		post("/updateCell", (req, res) -> {
+			res.type("application/json");
+			return ttt.updateCell(Integer.parseInt(req.queryParams("id")));
 		});
 		
 	}
