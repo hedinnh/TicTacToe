@@ -1,6 +1,7 @@
 package is.ru.ticTacToe;
 
-
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
 import edu.princeton.cs.algs4.*;
 
 public class TicTacToe {
@@ -116,7 +117,7 @@ public class TicTacToe {
 		}
 	}
 	
-	public boolean valideMove(int i, char[][] b)
+	public boolean validateMove(int i, char[][] b)
 	{
 		int y = 0;
 		if(i > 3)
@@ -136,6 +137,36 @@ public class TicTacToe {
 		return false;
 	}
 
+	public JSONObject updateCell() {
+		JSONArray arr = new JSONArray();
+		JSONObject obj = new JSONObject();
+		
+		String b = null;
+		for (int i = 0; i < board.length; i++) {
+			JSONArray cells = new JSONArray(); 
+			for (int j = 0; j < board[i].length; j++) {
+				cells.add(String.valueOf(board[i][j]));
+			}
+			arr.add(cells);
+		}
+		obj.put("cells", arr);
+		return obj;
+	}
+	public JSONObject updateCell(int cell) {
+		JSONArray arr = new JSONArray();
+		JSONObject obj = new JSONObject();
+		makeMove(cell);
+		String b = null;
+		for (int i = 0; i < board.length; i++) {
+			JSONArray cells = new JSONArray(); 
+			for (int j = 0; j < board[i].length; j++) {
+				cells.add(String.valueOf(board[i][j]));
+			}
+			arr.add(cells);
+		}
+		obj.put("cells", arr);
+		return obj;
+	}
 	public static void main(String[] args) {
 		
 	}

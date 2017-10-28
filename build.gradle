@@ -1,6 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'application'
-mainClassName = 'is.ru.ticTacToe.TicTacToe'
+mainClassName = 'is.ru.ticTacToe.SparkServer'
 
 repositories {
     mavenCentral()
