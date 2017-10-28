@@ -82,6 +82,10 @@ public class TicTacToe {
 	
 	public void makeMove(int i)
 	{
+		if(done) {
+			return;
+		}
+
 		int y = 0;
 		if(i > 3) {
 			if(i > 6) {
