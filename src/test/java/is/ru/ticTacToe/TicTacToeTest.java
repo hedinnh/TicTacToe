@@ -31,19 +31,53 @@ public class TicTacToeTest{
     }
 
     @Test
-    public void testWinO(){
+    public void testWinHorizontalO(){
         ttt.makeMove(1);
+        ttt.makeMove(4);
         ttt.makeMove(3);
-        ttt.makeMove(2);
-        ttt.makeMove(6);
+        ttt.makeMove(5);
         ttt.makeMove(7);
-        ttt.makeMove(9);
+        ttt.makeMove(6);
 
         assertEquals('O', ttt.checkWin());
     }
 
     @Test
-    public void testWinX(){
+    public void testWinHorizontalX(){
+        ttt.makeMove(1);
+        ttt.makeMove(4);
+        ttt.makeMove(2);
+        ttt.makeMove(7);
+        ttt.makeMove(3);
+
+        assertEquals('X', ttt.checkWin());
+    }
+
+    @Test
+    public void testWinVerticalO(){
+        ttt.makeMove(1);
+        ttt.makeMove(2);
+        ttt.makeMove(3);
+        ttt.makeMove(5);
+        ttt.makeMove(7);
+        ttt.makeMove(8);
+
+        assertEquals('O', ttt.checkWin());
+    }
+
+    @Test
+    public void testWinVerticalX(){
+        ttt.makeMove(1);
+        ttt.makeMove(2);
+        ttt.makeMove(4);
+        ttt.makeMove(6);
+        ttt.makeMove(7);
+        
+        assertEquals('X', ttt.checkWin());
+    }
+
+    @Test
+    public void testWinCrossSectionalX(){
         ttt.makeMove(1);
         ttt.makeMove(2);
         ttt.makeMove(3);
