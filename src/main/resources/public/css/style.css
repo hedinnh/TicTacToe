@@ -94,6 +94,7 @@ html, body {
 .head1 {
     display: grid;
     color: white;
+    margin-left: 20px;
 }
 
 .head2 {
@@ -114,6 +115,7 @@ html, body {
     color: white;
     text-align: center;
     font-size: 12px;
+    margin-right: 39px;
 }
 
 p {
