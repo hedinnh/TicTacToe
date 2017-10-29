@@ -20,13 +20,10 @@
             $("p").show();
             $("p").text("X Wins this round!")
         } 
-        if(data.draw === true) {
+        if(data.winner[0] === 'E') {
             $("p").show();
             $("p").text("Draw, please play again!")
         }
-        
-        console.log(data)
-        console.log(data.draw)
     }
     function cellClick(id) {
         console.log(id)
