@@ -3,7 +3,7 @@
 
 # Administration manual
 
-###### What you need to administrate the game
+## What you need to administrate the game
 
 
 - internet connection
@@ -11,7 +11,7 @@
 - java
 - gradle
 
-###### To play the game click the link below
+#### To play the game click the link below
 
 https://gentle-crag-74536.herokuapp.com/
 
@@ -19,36 +19,37 @@ https://gentle-crag-74536.herokuapp.com/
 ## How to deploy, run and maintain
 ## in case of client/server or web application.
 
-##### You need git and a github account
+### You need git and a github account
 
 Create an account on [github].
 
-###### install git on your computer
+#### install git on your computer
 
 - ###### Install on [Windows]
 - ###### Install on [MacOS]
 - ###### Install on [GNU/Linux and UNIX]
 
 
-## You need java
+#### You need java
 
-###### Install on MacOS or Windows
-- Download the jdk installer from [Oracle] Java and run it.
-- Add Java to the [Path].
+##### Install on MacOS or Windows
+- ###### Download the jdk installer from [Oracle] Java and run it.
+- ###### Add Java to the [Path].
 
-### Install on GNU/Linux
+##### Install on GNU/Linux
 Install `openjdk-8-jdk`
-#### Ubuntu and Ubuntu-based systems:
+##### Ubuntu and Ubuntu-based systems:
 ```sh
 sudo apt-get install openjdk-8-jdk
 ```
 
-## You need Gradle
+#### You need Gradle
 Gradle is used for build automation.
 - ###### install [Gradle]
 
-
-
+License
+----
+MIT
 
 [Windows]: <https://git-scm.com/download/win>
 [MacOS]: <https://git-scm.com/download/mac>
