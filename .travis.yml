@@ -5,3 +5,5 @@ before_install:
  - chmod +x gradlew
 script:
   - ./gradlew check
+notifications:
+  slack: hugbunadarfraedi:tlaSo4x8WFsZ0iU29A0BgGZR
