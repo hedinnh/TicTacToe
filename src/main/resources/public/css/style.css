@@ -86,8 +86,8 @@ html, body {
 
 .header {
     background-color: black;
-    display: block;
-    height: 220px;
+    display: grid;
+    height: 90px;
    
 }
 
@@ -98,6 +98,8 @@ html, body {
 
 .head2 {
     display: grid;
+    grid-column: 2 / 6;
+    grid-row: 3;
     color: white;
 }
 
