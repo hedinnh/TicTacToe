@@ -43,7 +43,7 @@ public class TicTacToe {
 		System.out.println();
 
 	}
-	public void boardFull() {
+	public boolean boardFull() {
 		int count = 0;
 		for (int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
@@ -54,6 +54,7 @@ public class TicTacToe {
 		if(count == 9) {
 			done = true;
 		}
+		return false;
 	}
 
 		/** Check if there is a winner
@@ -74,7 +75,7 @@ public class TicTacToe {
 			done = true;
 			return board[1][1];
 		}
-		if(done) {
+		if(boardFull() == true) {
 			return 'E';
 		}
 		return '-';
