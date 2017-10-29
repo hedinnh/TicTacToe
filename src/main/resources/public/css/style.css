@@ -95,6 +95,7 @@ html, body {
     display: grid;
     color: white;
     margin-left: 20px;
+    text-align: center;
 }
 
 .head2 {
