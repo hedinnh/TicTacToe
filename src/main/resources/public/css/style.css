@@ -25,7 +25,7 @@ html, body {
     grid-column: 2;
 }
 
-.botton {
+.newGame {
     display: grid;
     width: fit-content;
     grid-row: 3;
