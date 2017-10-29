@@ -121,22 +121,6 @@ public class TicTacToe {
 		checkWin();
 	}
 
-		public boolean validateMove(int i, char[][] b) {
-		int y = 0;
-		if(i > 3) {
-			i = i - 3;
-			y = y++;
-			if(i > 3) {
-				i = i - 3;
-				y = y + 3;
-			}
-		}
-		i -= 1;
-		if(b[y][i] == '-') {
-			return true;
-		}
-		return false;
-	}
 
 	public JSONObject reset() {
 		done = false;

@@ -28,5 +28,11 @@ public class TicTacToeTest{
         assertEquals("X--------",ttt.getBoard());
         ttt.makeMove(5);
         assertEquals("X---O----",ttt.getBoard());
+        ttt.makeMove(2);
+        assertEquals("XX--O----", ttt.getBoard());
+        ttt.makeMove(6);
+        ttt.makeMove(8);
+        assertEquals("XX--OO-X-", ttt.getBoard());
     }
+
 }
