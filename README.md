@@ -5,7 +5,7 @@
 
 # TicTacToe
 
-## TicTacToe is a two player strategy game. <br />
+TicTacToe is a simple two player strategy game. <br />
 
 - Each player has a symbol, either X or O. 
 - The player that starts the game has the symbol X. 
@@ -24,3 +24,7 @@ This is a group project in a software engineering course at Reykjavik university
 - Garðar Sigurðsson
 - Alexander Már Sigurgeirsson
 - Jón Hjörtur Brjánsson
+
+<a href="https://www.youtube.com/watch?v=0uLI6BnVh6w
+" target="_blank"><img src="http://img.youtube.com/vi/0uLI6BnVh6w/0.jpg" 
+alt="Have fun playing!" width="480" height="360" border="10" /></a>
