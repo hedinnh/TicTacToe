@@ -11,12 +11,18 @@
                 }
             }
         }
+        if(data.winner[0] === 'O') {
+            $("#winnero").toggle();
+        }
+        if(data.winner[0] === 'X') {
+            $("#winnerx").toggle();
+        }
+       console.log(data.winner[0])
     }
     function cellClick(id) {
         console.log(id)
         $.post('updateCell', { id: id })
         .done(function(data) {
-            console.log(data)
             updateCells(data)
         })
     }
@@ -25,12 +31,16 @@
 
 
     $('.newGame').click(function(e) {
-        console.log(e)
+        $("#winner").toggle();
         $.post('reset')
         .done(function(data) {
             $('.cell').off('click').click(function (e) { cellClick(this.id); })
-            console.log(data)
             updateCells(data)
         })
     })
+   
 })()
+
+$(".head2").click(function(data){
+    $("#winner").toggle();
+});

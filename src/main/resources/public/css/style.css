@@ -105,3 +105,13 @@ html, body {
     background-color: black;
     color: white;
 }
+#winnerx {
+    display: none;
+    color: #b16232;
+    font-size: 30px;
+}
+#winnero {
+    display: none;
+    color:#b16232;
+    font-size: 30px;
+}
