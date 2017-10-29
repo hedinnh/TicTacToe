@@ -85,7 +85,7 @@ html, body {
 }
 
 .header {
-    background-color: black;
+    background-color:#000066;
     display: grid;
     height: 90px;
    
@@ -104,8 +104,9 @@ html, body {
 }
 
 .footer {
-    background-color: black;
+    background-color:#000066;
     color: white;
+    text-align: center;
 }
 #winnerx {
     display: none;
