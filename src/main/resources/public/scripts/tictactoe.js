@@ -1,6 +1,7 @@
 (function() {
     function updateCells(data) {
         let cells = $('.cell')
+        
         for(let i = 0; i < data.cells.length; i++) {
             for(let j = 0; j < data.cells[i].length; j++) {
                 let cellId = i * data.cells.length + j + 1
@@ -18,13 +19,11 @@
         if(data.winner[0] === 'X') {
             $("p").show();
             $("p").text("X Wins this round!")
-        }
-        if(data.gameOver === true) {
+        } 
+        if(data.winner[0] === 'E') {
             $("p").show();
-            $("p").text("Draw! Please try again!")
+            $("p").text("Draw, please play again!")
         }
-        console.log(data)
-        console.log(data.gameOver)
     }
     function cellClick(id) {
         console.log(id)
