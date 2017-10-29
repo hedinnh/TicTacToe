@@ -8,6 +8,7 @@ public class TicTacToe {
 	private static char[][] board;
 	private static boolean done;
 	private static boolean playerTurn = true;
+	private static boolean draw = false;
 	/**
 	 * Constructor, set variables and call createboard
 	 */
@@ -53,6 +54,7 @@ public class TicTacToe {
 		}
 		if(count == 9) {
 			done = true;
+			return true;
 		}
 		return false;
 	}
@@ -129,6 +131,7 @@ public class TicTacToe {
 
 	public JSONObject reset() {
 		done = false;
+		draw = false;
 		playerTurn = true;
 		createBoard();
 		JSONArray arr = new JSONArray();
@@ -145,6 +148,7 @@ public class TicTacToe {
 		obj.put("cells", arr);
 		obj.put("gameOver" , done);
 		obj.put("winner", String.valueOf(checkWin()));
+		obj.put("draw", draw);
 		return obj;
 	}
 	public JSONObject updateCell(int cell) {
@@ -159,9 +163,14 @@ public class TicTacToe {
 			}
 			arr.add(cells);
 		}
+		if(boardFull()) {
+			draw = true;
+		}
 		obj.put("cells", arr);
 		obj.put("gameOver" , done);
 		obj.put("winner", String.valueOf(checkWin()));
+		obj.put("draw", draw);
+
 		return obj;
 	}
 	public static void main(String[] args) {

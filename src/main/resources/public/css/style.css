@@ -107,16 +107,7 @@ html, body {
     background-color:#000066;
     color: white;
     text-align: center;
-}
-#winnerx {
-    display: none;
-    color: #b16232;
-    font-size: 30px;
-}
-#winnero {
-    display: none;
-    color:#b16232;
-    font-size: 30px;
+    font-size: 10px;
 }
 
 p {
