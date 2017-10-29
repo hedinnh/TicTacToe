@@ -4,10 +4,14 @@ html, body {
     margin: 0;
     padding: 0;
     display: grid;
-    background-color: red;
+    background-color:#b9b7b7;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+.mainBody {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
 .board {
     margin: 0;
     padding: 5px;
@@ -16,16 +20,47 @@ html, body {
     display: grid;
     grid-template-columns: 150px 150px 150px; 
     grid-template-rows: 150px 150px 150px; 
-    background-color: black;
+    /*background-color: black;*/
+    grid-row: 2 / 3;
+    grid-column: 2;
+}
+
+.newGame {
+    display: grid;
+    width: fit-content;
+    grid-row: 3;
+    grid-column: 2;
 }
 
 .cell {
-    margin: 5px;
+    margin: 2px;
     font-size: 100px;
     line-height: 150px;
     text-align: center;
-    background-color: white;
+    background-color:#f8f8f8;
 }
 .cell:hover {
-    background-color:  green;
+    background-color:  #e4e7e4;
+}
+
+.header {
+    background-color: black;
+    display: block;
+    height: 220px;
+   
+}
+
+.head1 {
+    display: grid;
+    color: white;
+}
+
+.head2 {
+    display: grid;
+    color: white;
+}
+
+.footer {
+    background-color: black;
+    color: white;
 }
