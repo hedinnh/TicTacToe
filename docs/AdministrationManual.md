@@ -1,3 +1,6 @@
+![Awesome Software Solutions](https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=159bd2fb9f9134517a7afa2bd488fdc39&authkey=AVVn2ffzxpv1OSM7aMCfQpE)
+----
+
 # Administration manual
 
 ###### What you need to administrate the game
