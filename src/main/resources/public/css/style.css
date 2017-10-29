@@ -118,3 +118,9 @@ html, body {
     color:#b16232;
     font-size: 30px;
 }
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}

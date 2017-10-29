@@ -12,12 +12,19 @@
             }
         }
         if(data.winner[0] === 'O') {
-            $("#winnero").toggle();
+            $("p").show();
+            $("p").text("O Wins this round!")
         }
         if(data.winner[0] === 'X') {
-            $("#winnerx").toggle();
+            $("p").show();
+            $("p").text("X Wins this round!")
         }
-       console.log(data.winner[0])
+        if(data.gameOver === true) {
+            $("p").show();
+            $("p").text("Draw! Please try again!")
+        }
+        console.log(data)
+        console.log(data.gameOver)
     }
     function cellClick(id) {
         console.log(id)
@@ -26,12 +33,9 @@
             updateCells(data)
         })
     }
-
     $('.cell').click(function (e) { cellClick(this.id); })
-
-
     $('.newGame').click(function(e) {
-        $("#winner").toggle();
+        $("p").hide();
         $.post('reset')
         .done(function(data) {
             $('.cell').off('click').click(function (e) { cellClick(this.id); })
@@ -40,7 +44,3 @@
     })
    
 })()
-
-$(".head2").click(function(data){
-    $("#winner").toggle();
-});
