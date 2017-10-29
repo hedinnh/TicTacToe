@@ -59,3 +59,12 @@ gradle build run
 License
 ----
 MIT
+
+[ASS]: <ass_ttt@programmer.net>
+[Windows]: <https://git-scm.com/download/win>
+[MacOS]: <https://git-scm.com/download/mac>
+[github]: <https://github.com/>
+[GNU/Linux and UNIX]: <https://git-scm.com/download/linux>
+[Oracle]: <http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
+[Path]: <https://www.java.com/en/download/help/path.xml>
+[Gradle]: <https://gradle.org/install/>
