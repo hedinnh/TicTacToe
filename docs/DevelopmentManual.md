@@ -1,3 +1,5 @@
+![Awesome Software Solutions](https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=159bd2fb9f9134517a7afa2bd488fdc39&authkey=AVVn2ffzxpv1OSM7aMCfQpE)
+----
 # What you need to start development
 
 ## You need the source code
@@ -6,7 +8,8 @@ To gain access to the source code send a request to [ASS].
 
 ## You need git and a github account
 
-Create an account on [github].
+- ###### Create an account on [github].
+
 To be able to get the source code you need to have git installed on your computer.
 - ###### Install on [Windows]
 - ###### Install on [MacOS]
@@ -15,8 +18,8 @@ To be able to get the source code you need to have git installed on your compute
 ## You need java
 
 ### Install on MacOS or Windows
-- Download the jdk installer from [Oracle] Java and run it.
-- Add Java to the [Path].
+- ###### Download the jdk installer from [Oracle] Java and run it.
+- ###### Add Java to the [Path].
 
 ### Install on GNU/Linux
 Install `openjdk-8-jdk`
@@ -32,7 +35,7 @@ yaourt jdk
 ```
 - Also available as jdk in AUR.
 
-#### Install FreeBSD and BSD systems:
+### Install on FreeBSD and BSD systems:
 ```sh
 pkg install openjdk8
 ```
