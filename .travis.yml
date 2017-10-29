@@ -2,8 +2,15 @@ language: java
 jdk:
 - oraclejdk8
 before_install:
- - chmod +x gradlew
+- chmod +x gradlew
 script:
-  - ./gradlew check
+- "./gradlew check"
 notifications:
   slack: hugbunadarfraedi:tlaSo4x8WFsZ0iU29A0BgGZR
+deploy:
+  provider: heroku
+  api_key:
+    secure: ntCQWB6xz1EWFMjNaz5RKpWiNeQxLmWOr2i5kzOeFkfxsSXVhWZHpm0kD4vwSRpAYS2RbshjvhiGzyPDJpTcJTt9eX041PZrWlEmyrTCo7Ye5ov/6UHrdq1rM/+I0KgGUiOWBQU2HVV49LsKYzPl+Mc7aibfOivFONr8ncgcrI3nMCuaNzTSvqt1UIvq+1Ok/vekDcV4FWAvYUjIItzfDxhP2w0yQzTj+SAnK0mnqUHvD8S244iMDYajeDhhcWtDXZ7odkkB2561yKu6Rfsa2FY0jzri6fPILhyg+kiVJy0o2Mk4aRYqOeT3So0YsK77F3HWhIVLXadwZFJ8RJB+bkoXDVbdHvkzaDvEtb6eOmB847PjqjSIKX7oIz2wH4k+/DitEn9drPwjoAVP1tL12waInyKuc3/dWAkKMXZgtmZUNF06Jz7UD0Qo+y6EZA688pblNpVlkpTmQODA0Ycw3zQyL51ACuakp+balOP9BPobNsj5iJAvt9kCPBjj5IsbpL306mu3aHtM6mdbDcxgIGMV8zSPf/cFW3WYh7G++ufjIWwxarOYZmQMH77wTwEVjX56tTRRCXaoCM6t/wjTVLxTGl7G0VOIeSBRRVmlb02NI//8Wkx0mmT+S5U9DRv3ub0sQuaKbI5Oy7wtll3+dbAK/mVmO/3nGX5ai6Nn0mA=
+  app: TicTacToe
+  on:
+    repo: hedinnh/TicTacToe
