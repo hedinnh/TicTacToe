@@ -85,7 +85,7 @@ html, body {
 }
 
 .header {
-    background-color:#000066;
+    background-color:#030353;
     display: grid;
     height: 90px;
    
@@ -104,10 +104,16 @@ html, body {
 }
 
 .footer {
-    background-color:#000066;
+    background-color:#030353;
     color: white;
     text-align: center;
-    font-size: 10px;
+    margin-top: 40px;
+}
+
+#names {
+    color: white;
+    text-align: center;
+    font-size: 12px;
 }
 
 p {
