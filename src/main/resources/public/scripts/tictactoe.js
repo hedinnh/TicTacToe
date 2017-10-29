@@ -24,7 +24,7 @@
     $('.cell').click(function (e) { cellClick(this.id); })
 
 
-    $('#newGame').click(function(e) {
+    $('.newGame').click(function(e) {
         console.log(e)
         $.post('reset')
         .done(function(data) {
