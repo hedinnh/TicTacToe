@@ -29,7 +29,18 @@ public class TicTacToe {
 		}
 		return board;
 	}
-	/** 
+	//Test HElper
+	public static String getBoard()
+	{
+		String s = "";
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				s = s + (board[i][j]);
+			}
+		}
+		return s;
+	}
+	/**
 	 * Print the multidimensional array to console
 	 */
 	public void printBoard() {
@@ -80,7 +91,7 @@ public class TicTacToe {
 		}
 		return '-';
 	}
-	
+
 	public void makeMove(int i)
 	{
 		if(done) {
@@ -109,8 +120,8 @@ public class TicTacToe {
 		}
 		checkWin();
 	}
-	
-	public boolean validateMove(int i, char[][] b) {
+
+		public boolean validateMove(int i, char[][] b) {
 		int y = 0;
 		if(i > 3) {
 			i = i - 3;
@@ -133,10 +144,10 @@ public class TicTacToe {
 		createBoard();
 		JSONArray arr = new JSONArray();
 		JSONObject obj = new JSONObject();
-		
+
 		String b = null;
 		for (int i = 0; i < board.length; i++) {
-			JSONArray cells = new JSONArray(); 
+			JSONArray cells = new JSONArray();
 			for (int j = 0; j < board[i].length; j++) {
 				cells.add(String.valueOf(board[i][j]));
 			}
@@ -153,7 +164,7 @@ public class TicTacToe {
 		makeMove(cell);
 		String b = null;
 		for (int i = 0; i < board.length; i++) {
-			JSONArray cells = new JSONArray(); 
+			JSONArray cells = new JSONArray();
 			for (int j = 0; j < board[i].length; j++) {
 				cells.add(String.valueOf(board[i][j]));
 			}
@@ -165,6 +176,6 @@ public class TicTacToe {
 		return obj;
 	}
 	public static void main(String[] args) {
-		
+
 	}
 }
